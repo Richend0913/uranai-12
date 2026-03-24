@@ -32,6 +32,10 @@ body {
   overflow-x: hidden;
 }
 
+img { max-width: 100%; height: auto; }
+
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
 /* Star background */
 body::before {
   content: '';
