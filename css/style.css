@@ -431,3 +431,34 @@ footer a:hover { color: var(--gold); }
   .lucky-items { grid-template-columns: repeat(2, 1fr); }
   .related-links { grid-template-columns: 1fr; }
 }
+
+/* A8 affiliate CTA (shindan aff-card pattern, theme-adapted) */
+.aff {
+  background: linear-gradient(135deg, rgba(107, 63, 160, 0.25), rgba(45, 27, 105, 0.35));
+  border: 1px solid var(--border-glow);
+  border-radius: 16px;
+  padding: 22px 20px;
+  margin: 24px 0;
+  text-align: center;
+  box-shadow: var(--shadow-purple);
+}
+.aff-head { font-size: 0.95rem; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
+.aff-sub { font-size: 0.78rem; color: var(--text-sub); margin-bottom: 16px; }
+.aff-card {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(240, 230, 255, 0.06);
+  border: 1px solid var(--border-glow);
+  border-radius: 14px; padding: 14px 16px; margin-bottom: 10px;
+  text-decoration: none; text-align: left; transition: all 0.2s;
+}
+.aff-card:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: var(--shadow-gold); }
+.aff-ic { font-size: 1.6rem; flex-shrink: 0; }
+.aff-body { flex: 1; display: flex; flex-direction: column; }
+.aff-body b { font-size: 0.92rem; color: var(--star-white); }
+.aff-body small { font-size: 0.74rem; color: var(--text-sub); line-height: 1.5; }
+.aff-badge {
+  font-size: 0.68rem; color: var(--gold-light);
+  background: rgba(255, 215, 0, 0.1); border: 1px solid rgba(255, 215, 0, 0.35);
+  border-radius: 12px; padding: 3px 10px; white-space: nowrap; flex-shrink: 0;
+}
+.aff-note { font-size: 0.66rem; color: var(--text-sub); opacity: 0.75; margin-top: 4px; }
