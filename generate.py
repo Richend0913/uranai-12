@@ -412,16 +412,16 @@ def ad_unit(slot="auto"):
 
 
 # ─── A8.net 占いアフィリエイト ─────────────────────────────────────
-# shindan / zense-shindan で稼働中の占いプログラム（ココナラ占い・電話占いウィル）と
+# shindan / zense-shindan で稼働中の占いプログラム（ココナラ占い）と
 # 同一素材（a8mat）を姉妹サイトとして共有。
+# ※電話占いウィルはオーナーの過去リバート履歴（2026-04-20）に合わせ掲載しない。
 # ※本来はサイト別リンク発行が推奨。オーナーがA8管理画面で uranai-12 の副サイト登録・
-#   サイト別リンクを発行したら A8_COCONALA_URL / A8_WILL_URL を差し替えること。
+#   サイト別リンクを発行したら A8_COCONALA_URL を差し替えること。
 A8_COCONALA_URL = "https://px.a8.net/svt/ejp?a8mat=4B1O1N+1JDFWA+2PEO+C510X"
-A8_WILL_URL = "https://px.a8.net/svt/ejp?a8mat=4B1O1N+2D5456+2QD4+5Z6WX"
 
 
 def aff_block(heading, sub):
-    """shindan の結果画面パターンを踏襲した占いCTAブロック（aff-card 2件＋広告表記）。
+    """shindan の結果画面パターンを踏襲した占いCTAブロック（aff-card 1件＋広告表記）。
     配置は1ページ最大2箇所まで（本文末尾のインテント枠＋フッター直前）。"""
     return f'''<div class="aff">
 <div class="aff-head">🔮 {heading}</div>
@@ -430,11 +430,6 @@ def aff_block(heading, sub):
 <span class="aff-ic">🌱</span>
 <span class="aff-body"><b>ココナラ占い</b><small>500円から気軽に相談できる占いマーケット</small></span>
 <span class="aff-badge">初回割引</span>
-</a>
-<a class="aff-card" href="{A8_WILL_URL}" target="_blank" rel="nofollow sponsored noopener">
-<span class="aff-ic">🌟</span>
-<span class="aff-body"><b>電話占いウィル</b><small>口コミ高評価の実力派鑑定士に今すぐ相談</small></span>
-<span class="aff-badge">初回特典</span>
 </a>
 <div class="aff-note">※広告（PR）／ 鑑定は各サービスの提供です</div>
 </div>'''
