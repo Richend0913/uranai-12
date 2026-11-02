@@ -10,7 +10,7 @@ SIGNS_DIR = os.path.join(SITE_DIR, "signs")
 os.makedirs(SIGNS_DIR, exist_ok=True)
 
 SITE_URL = "https://richend0913.github.io/uranai-12"
-ADSENSE_ID = "ca-pub-6327505164684489"
+ADSENSE_ID = ""  # AdSense removed: not approved (2026-11-02)
 YEAR = 2026
 
 # ===== 12星座データ =====
@@ -394,7 +394,6 @@ def html_head(title, description, canonical, breadcrumb_items=None):
 <meta name="twitter:title" content="{title} | 12星座占い">
 <meta name="twitter:description" content="{description}">
 <link rel="stylesheet" href="../css/style.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_ID}" crossorigin="anonymous"></script>
 {bc_json}
 </head>
 '''
@@ -409,10 +408,7 @@ def nav_html(active=""):
 
 
 def ad_unit(slot="auto"):
-    return f'''<div class="ad-space">
-<ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_ID}" data-ad-slot="{slot}" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
-</div>'''
+    return f''''''
 
 
 def footer_html():
@@ -760,7 +756,6 @@ def generate_index():
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
 <link rel="stylesheet" href="css/style.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_ID}" crossorigin="anonymous"></script>
 {jsonld}
 </head>
 <body>
