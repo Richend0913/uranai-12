@@ -11,6 +11,7 @@ os.makedirs(SIGNS_DIR, exist_ok=True)
 
 SITE_URL = "https://richend0913.github.io/uranai-12"
 ADSENSE_ID = ""  # AdSense removed: not approved (2026-11-02)
+GA_TAG = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-63VB4HT3T2"></script>\n<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag(\'js\',new Date());gtag(\'config\',\'G-63VB4HT3T2\',{page_area:\'uranai-12\'});</script>'
 YEAR = 2026
 
 # ===== 12星座データ =====
@@ -380,6 +381,7 @@ def html_head(title, description, canonical, breadcrumb_items=None):
     return f'''<!DOCTYPE html>
 <html lang="ja">
 <head>
+{GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title} | 12星座占い</title>
@@ -769,6 +771,7 @@ def generate_index():
     content = f'''<!DOCTYPE html>
 <html lang="ja">
 <head>
+{GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
